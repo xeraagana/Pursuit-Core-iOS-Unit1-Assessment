@@ -12,4 +12,3 @@ import Foundation
 print("There are \(Card.newDeck(aceValue: 1).count) in a deck of cards")
 // There are 52 in a deck of cards
  // pushing to git hub
-
