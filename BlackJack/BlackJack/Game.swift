@@ -9,16 +9,16 @@
 import Foundation
 
 class Game {
-    let deck = [Card]()
-    let player = Player()
+    var deck = [Card]()
+    var player = Player()
     var hitPlayer = false
     
-}
+
 var hasMoreCards:Bool {
     return true
 }
 
-let randomComputerScore: Int = 2
+var randomComputerScore: Int = 2
 //var randomComputerScore: Int {
 //    if num in randomComputerScore {
 //        return
@@ -30,17 +30,21 @@ let randomComputerScore: Int = 2
 //
 //
 //
-//func hitMe() -> Card?{
-//    return Card
-//}
-func newGame(){
-for num in card {
-    if  == 21 {
+func hitMe() -> Card?{
+   for card in deck {
+    if player. <= 21 {
+        return Card(suit: Card.)
         
-    
-    print(" would you like to play again" )
- 
 }
+func newGame(){
+    randomComputerScore = 21
+    deck.removeAll()
+    }
+
+//
+//    print(" would you like to play again" )
+//
+//}
     
 
 func gameOver() {
@@ -50,12 +54,15 @@ func gameOver() {
 
 func computerVsPlayer(){
     
-   // var winner = 21
+   
     
     
 }
     
-func gameStatus(){
+func gameStatus() -> Int{
+    
     
 }
 
+}
+}
