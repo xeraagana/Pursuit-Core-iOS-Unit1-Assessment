@@ -8,7 +8,7 @@
 
 import Foundation
 
-    
+
 class Game {
     var deck = Card.newDeck(aceValue: 11)
     var player = Player()
@@ -30,13 +30,14 @@ var randomComputerScore: Int = 2
 //}
 //
 //
-//
+
     
 func hitMe() -> Int {
     deck  = deck.shuffled()
     if let lastCard = deck.popLast() {
         player.cards.append(lastCard)
         player.score += lastCard.value
+        print(" your score is \(player.score)do you want to hit or pass")
     
 }
     return player.score
@@ -45,6 +46,7 @@ func newGame(){
     player.score = 0
     randomComputerScore = 0
     deck.removeAll()
+    
     }
 
 //
@@ -53,29 +55,41 @@ func newGame(){
 //}
     
 
-    func gameOver( isset: Bool) -> Bool {
-    isset == false
+    func gameOver( isset: Bool) {
+    let isset = false
+        
+        if player.score == 21 {
+        print(" you win ")
+        } else {
+            randomComputerScore = 21
+            print(" sorry computer won ")
+            
     }
 
 func computerVsPlayer() {
     
+    
 }
     
     func gameStatus(userscardcount: Int){
-       if userscardcount = {
-            
+        _ = player.score
+              if player.score <= 21 {
+                print("you won ")
         }
-    }
+            
+        
+}
     
 //
-//    func stopHits(){
-//        if player.score <= 21 {
-//        print("you have \(randomComputerScore) would you like to hit ")
+ func stopHits(){
+    if player.score <= 21 {
+        print("you have \(player.score) would you like to hit ")
 //        
-//    }
+  }
 //    
 //    
-//}
+}
 
 
+}
 }
