@@ -31,7 +31,7 @@ struct Card {
   
   static func newDeck(aceValue: Int) -> [Card] {
     var cards = [Card]()
-    for cardValue in 2..<11 {
+    for cardValue in 2..<11 { // this repeprsents all the cards in the deck that doesnt have a face value 2-10
       for suit in Suit.allCases {
         let card = Card(suit: suit, value: cardValue, isFaceCard: false)
         cards.append(card)

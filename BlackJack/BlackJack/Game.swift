@@ -8,11 +8,12 @@
 
 import Foundation
 
+    
 class Game {
-    var deck = [Card]()
+    var deck = Card.newDeck(aceValue: 11)
     var player = Player()
     var hitPlayer = false
-    
+
 
 var hasMoreCards:Bool {
     return true
@@ -30,14 +31,19 @@ var randomComputerScore: Int = 2
 //
 //
 //
-func hitMe() -> Card?{
-   for card in deck {
-    if player. <= 21 {
-        return Card(suit: Card.)
-        
+    
+func hitMe() -> Int {
+    deck  = deck.shuffled()
+    if let lastCard = deck.popLast() {
+        player.cards.append(lastCard)
+        player.score += lastCard.value
+    
 }
+    return player.score
+    }
 func newGame(){
-    randomComputerScore = 21
+    player.score = 0
+    randomComputerScore = 0
     deck.removeAll()
     }
 
@@ -47,22 +53,29 @@ func newGame(){
 //}
     
 
-func gameOver() {
-    
-    
-}
+    func gameOver( isset: Bool) -> Bool {
+    isset == false
+    }
 
-func computerVsPlayer(){
-    
-   
-    
+func computerVsPlayer() {
     
 }
     
-func gameStatus() -> Int{
+    func gameStatus(userscardcount: Int){
+       if userscardcount = {
+            
+        }
+    }
     
-    
-}
+//
+//    func stopHits(){
+//        if player.score <= 21 {
+//        print("you have \(randomComputerScore) would you like to hit ")
+//        
+//    }
+//    
+//    
+//}
 
-}
+
 }
